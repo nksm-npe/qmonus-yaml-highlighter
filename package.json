@@ -1,0 +1,25 @@
+{
+  "name": "qmonus-yaml",
+  "displayName": "qmonus-yaml",
+  "description": "Syntax highlighting for Qmonus-yaml",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "qmonus-yaml",
+      "aliases": ["qmonus-yaml", "qmonus-yaml"],
+      "extensions": [".yaml",".yml"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "qmonus-yaml",
+      "scopeName": "source.qmonus-yaml",
+      "path": "./syntaxes/qmonus-yaml.tmLanguage.json"
+    }]
+  }
+}
