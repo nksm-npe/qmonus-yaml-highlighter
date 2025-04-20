@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "publisher": "qmonus",
   "engines": {
-    "vscode": "^1.99.0"
+    "vscode": "^1.60.0"
   },
   "main": "./src/extension.js",
   "categories": [
@@ -26,14 +26,6 @@
     "onLanguage:yaml"
   ],
   "contributes": {
-    "languages": [
-      {
-        "id": "qmonus-yaml",
-        "aliases": ["Qmonus YAML", "qmonus-yaml"],
-        "extensions": [".qmonus.yaml", ".qmonus.yml"],
-        "configuration": "./language-configuration.json"
-      }
-    ],
     "grammars": [{
       "scopeName": "source.qmonus-yaml",
       "path": "./syntaxes/qmonus-yaml.tmLanguage.json",
