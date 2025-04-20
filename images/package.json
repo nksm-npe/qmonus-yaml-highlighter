@@ -1,0 +1,9 @@
+{
+  "name": "qmonus-yaml-images",
+  "version": "1.0.0",
+  "description": "SVG to PNG conversion tools for Qmonus YAML Highlighter",
+  "private": true,
+  "dependencies": {
+    "svg2img": "^0.9.0"
+  }
+}
