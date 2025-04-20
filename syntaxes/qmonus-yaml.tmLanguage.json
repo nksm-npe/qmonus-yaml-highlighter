@@ -93,8 +93,19 @@
       ]
     },
     {
-      "name": "meta.embedded.block.qmonus-python.category-example",
-      "begin": "(?<=\\bcategory:\\s*example\\s*\\n\\s*name:.+)\\s*\\n\\s*fakes:\\s*$",
+      "name": "meta.embedded.block.qmonus-python.category-name-fakes",
+      "begin": "(?<=\\bcategory:\\s*[^\\n]+\\s*\\n\\s*name:.+)\\s*\\n\\s*fakes:\\s*$",
+      "end": "^(?!\\s+)",
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ]
+    },
+    {
+      "name": "meta.embedded.block.qmonus-python.name-fakes",
+      "begin": "^\\s*name:.+\\n\\s*fakes:\\s*$",
       "end": "^(?!\\s+)",
       "contentName": "source.python",
       "patterns": [

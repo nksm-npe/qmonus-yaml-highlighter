@@ -14,7 +14,7 @@ QmonusのYAMLファイル内に埋め込まれたPythonコードブロックに�
   - `script: |-` の後に続くPythonコードブロック
   - `fakes:` の後に続くPythonコードブロック
   - `output: |-`, `cleanup: |-`, `end: |-`, `body: |-` の後に続くPythonコードブロック
-  - `category: example` と `name:` の後に続く `fakes:` ブロック
+  - `category:` の値に関わらず、`name:` の後に続く `fakes:` ブロック
 
 例：
 
@@ -64,7 +64,7 @@ hooks:
 
 ```yaml
 # パターン4: fakes: の後のPythonコードブロック
-category: example
+category: Tutorial
 name: getHoge
 fakes:
   # このPythonコードがハイライトされます
@@ -158,7 +158,7 @@ code --install-extension qmonus-yaml-0.0.2.vsix
   - `script: |-` の後に続くブロック
   - `fakes:` の後に続くブロック
   - `output: |-`, `cleanup: |-`, `end: |-`, `body: |-` の後に続くブロック
-  - `category: example` + `name:` + `fakes:` の組み合わせに対応
+  - `category:` の値に関わらず、`name:` + `fakes:` の組み合わせに対応
 
 ### 0.0.1
 - 初期リリース
