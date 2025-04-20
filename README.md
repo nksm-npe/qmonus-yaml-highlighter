@@ -1,65 +1,65 @@
-# qmonus-yaml README
+# Qmonus YAML Highlighter
 
-This is the README for your extension "qmonus-yaml". After writing up a brief description, we recommend including the following sections.
+QmonusのYAMLファイル内に埋め込まれたPythonコードブロックに対するシンタックスハイライト機能を提供する拡張機能です。
 
-## Features
+## 機能
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+この拡張機能は以下の機能を提供します：
 
-For example if there is an image subfolder under your extension project workspace:
+- QmonusのYAMLファイル内に埋め込まれたPythonコードブロックを自動的に検出
+- 検出されたPythonコードに対して適切なシンタックスハイライトを適用
+- 以下のパターンに対応:
+  - `code: |-` の後に続くPythonコードブロック
+  - `action_type: script` の後の `code: |-` で始まるPythonコードブロック
 
-\!\[feature X\]\(images/feature-x.png\)
+例：
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![ハイライト例](images/highlight-example.png)
 
-## Requirements
+## 使い方
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+この拡張機能をインストールすると、`.yaml`および`.yml`ファイル内のQmonus形式のコードブロックが自動的にハイライトされます。
 
-## Extension Settings
+特定のファイルを`.qmonus.yaml`または`.qmonus.yml`として保存すると、専用のファイルタイプとして認識されます。
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## サポートしているパターン
 
-For example:
+以下のYAMLパターン内のPythonコードが認識されます：
 
-This extension contributes the following settings:
+```yaml
+# パターン1: code: |- の後にPythonコードが続く場合
+commands:
+  - command: script
+    kwargs:
+      code: |-
+        # ここのPythonコードがハイライトされます
+        result = some_function()
+        if result.error:
+            raise Error(result.code)
+```
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+```yaml
+# パターン2: action_type: script の後のcode: |- ブロック
+cancellation:
+  actions:
+    - action_type: script
+      code: |-
+        # ここのPythonコードもハイライトされます
+        await context.abort()
+```
 
-## Known Issues
+## 要件
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- Visual Studio Code 1.99.0以上
 
-## Release Notes
+## 既知の問題
 
-Users appreciate release notes as you update your extension.
+現在、特に既知の問題はありません。問題を発見した場合は、GitHubリポジトリにIssueを作成してください。
 
-### 1.0.0
+## リリースノート
 
-Initial release of ...
+### 0.0.1
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- 初期リリース
+- 基本的なシンタックスハイライト機能の実装
+- `code: |-` および `action_type: script` パターンのサポート

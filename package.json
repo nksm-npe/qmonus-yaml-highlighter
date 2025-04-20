@@ -1,25 +1,39 @@
 {
   "name": "qmonus-yaml",
-  "displayName": "qmonus-yaml",
-  "description": "Syntax highlighting for Qmonus-yaml",
+  "displayName": "Qmonus YAML Highlighter",
+  "description": "Syntax highlighting for YAML files with embedded Python code blocks in Qmonus format",
   "version": "0.0.1",
+  "publisher": "qmonus",
   "engines": {
     "vscode": "^1.99.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  "keywords": [
+    "yaml",
+    "python",
+    "qmonus",
+    "syntax",
+    "highlighting"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/yaml-embedded-python-highlighter"
+  },
   "contributes": {
-    "languages": [{
-      "id": "qmonus-yaml",
-      "aliases": ["qmonus-yaml", "qmonus-yaml"],
-      "extensions": [".yaml",".yml"],
-      "configuration": "./language-configuration.json"
-    }],
+    "languages": [
+      {
+        "id": "qmonus-yaml",
+        "aliases": ["Qmonus YAML", "qmonus-yaml"],
+        "extensions": [".qmonus.yaml", ".qmonus.yml"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
     "grammars": [{
-      "language": "qmonus-yaml",
       "scopeName": "source.qmonus-yaml",
-      "path": "./syntaxes/qmonus-yaml.tmLanguage.json"
+      "path": "./syntaxes/qmonus-yaml.tmLanguage.json",
+      "injectTo": ["source.yaml"]
     }]
   }
 }

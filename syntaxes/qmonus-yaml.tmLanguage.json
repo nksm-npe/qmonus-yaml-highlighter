@@ -1,32 +1,30 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "source.qmonus-yaml",
+	"injectionSelector": "L:source.yaml",
 	"name": "qmonus-yaml",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.qmonus-yaml",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.qmonus-yaml",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.qmonus-yaml",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.qmonus-yaml"
+  "patterns": [
+    {
+      "name": "meta.embedded.block.qmonus-python.code",
+      "begin": "(?<=\\bcode:\\s*\\|\\-?)\\s*$",
+      "end": "^(?!\\s+)",
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ]
+    },
+    {
+      "name": "meta.embedded.block.qmonus-python.action-script",
+      "begin": "(?<=\\baction_type:\\s*script)\\s+code:\\s*\\|\\-?\\s*$",
+      "end": "^(?!\\s+)",
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ]
+    }
+  ]
 }
