@@ -25,6 +25,94 @@
           "include": "source.python"
         }
       ]
+    },
+    {
+      "name": "meta.embedded.block.qmonus-python.script",
+      "begin": "(?<=\\bscript:\\s*\\|\\-?)\\s*$",
+      "end": "^(?!\\s+)",
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ]
+    },
+    {
+      "name": "meta.embedded.block.qmonus-python.fakes",
+      "begin": "(?<=\\bfakes:\\s*)\\s*$",
+      "end": "^(?!\\s+)",
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ]
+    },
+    {
+      "name": "meta.embedded.block.qmonus-python.output",
+      "begin": "(?<=\\boutput:\\s*\\|\\-?)\\s*$",
+      "end": "^(?!\\s+)",
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ]
+    },
+    {
+      "name": "meta.embedded.block.qmonus-python.cleanup",
+      "begin": "(?<=\\bcleanup:\\s*\\|\\-?)\\s*$",
+      "end": "^(?!\\s+)",
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ]
+    },
+    {
+      "name": "meta.embedded.block.qmonus-python.end",
+      "begin": "(?<=\\bend:\\s*\\|\\-?)\\s*$",
+      "end": "^(?!\\s+)",
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ]
+    },
+    {
+      "name": "meta.embedded.block.qmonus-python.body",
+      "begin": "(?<=\\bbody:\\s*\\|\\-?)\\s*$",
+      "end": "^(?!\\s+)",
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ]
+    },
+    {
+      "name": "meta.embedded.block.qmonus-python.category-example",
+      "begin": "(?<=\\bcategory:\\s*example\\s*\\n\\s*name:.+)\\s*\\n\\s*fakes:\\s*$",
+      "end": "^(?!\\s+)",
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ]
+    },
+    {
+      "name": "meta.embedded.block.qmonus-python.input",
+      "begin": "(?<=\\binput:\\s*$)\\s+(?:method|path|headers|body):",
+      "end": "^(?!\\s+)",
+      "contentName": "source.python",
+      "patterns": [
+        {
+          "include": "source.python"
+        }
+      ]
     }
   ]
 }
