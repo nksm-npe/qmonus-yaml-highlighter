@@ -145,22 +145,8 @@ code --install-extension qmonus-yaml-0.0.2.vsix
 
 ## 要件
 
-- Visual Studio Code 1.99.0以上
+- Visual Studio Code 1.60.0以上
 
 ## 既知の問題
 
 現在、特に既知の問題はありません。問題を発見した場合は、GitHubリポジトリにIssueを作成してください。
-
-## リリースノート
-
-### 0.0.2
-- 機能強化: さまざまなPythonコードブロックパターンに対応
-  - `script: |-` の後に続くブロック
-  - `fakes:` の後に続くブロック
-  - `output: |-`, `cleanup: |-`, `end: |-`, `body: |-` の後に続くブロック
-  - `category:` の値に関わらず、`name:` + `fakes:` の組み合わせに対応
-
-### 0.0.1
-- 初期リリース
-- 基本的なシンタックスハイライト機能の実装
-- `code: |-` および `action_type: script` パターンのサポート

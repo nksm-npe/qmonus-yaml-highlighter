@@ -2,8 +2,9 @@
   "name": "qmonus-yaml",
   "displayName": "Qmonus YAML Highlighter",
   "description": "Syntax highlighting for YAML files with embedded Python code blocks in Qmonus format",
-  "version": "0.0.1",
-  "publisher": "qmonus",
+  "version": "0.0.2",
+  "publisher": "Nakashima",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.60.0"
   },
